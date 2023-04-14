@@ -17,10 +17,14 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
         // add height for the appbar
         toolbarHeight: 100,
         // add a back button
+  
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        // add button to the right side
+        
+        
         // change the background color to white
         backgroundColor: Colors.white,
         // remove the shadow
@@ -45,7 +49,7 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 'Account',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(height: 24.0),
@@ -59,9 +63,9 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
               ),
               title: Padding(
                 padding: const EdgeInsets.only(left: 8),
-                child: Text('Wubeshet Yimam',
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                child: Text(
+                  'Wubeshet Yimam',
+                ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.fromLTRB(8, 8, 0, 0),
@@ -100,7 +104,7 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 'Settings',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(height: 24.0),
@@ -150,7 +154,7 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
                 backgroundColor: Color(0xffe4f6fd),
                 maxRadius: 25,
                 child: Icon(
-                  Icons.language_rounded,
+                  Icons.notifications,
                   color: Color(0xff17a4e8),
                 ),
               ),
@@ -178,11 +182,11 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
               // leading:
               leading: CircleAvatar(
-                backgroundColor:  Color(0xffeceaff),
+                backgroundColor: Color(0xffeceaff),
                 maxRadius: 25,
                 child: Icon(
                   Icons.dark_mode_sharp,
-                  color:  Color(0xff5532f6),
+                  color: Color(0xff5532f6),
                 ),
               ),
               title: Text('Dark Mode'),
@@ -212,7 +216,6 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
               ),
               title: Text('Help'),
               trailing: Container(
-
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f8),
                   borderRadius: BorderRadius.circular(10.0),
