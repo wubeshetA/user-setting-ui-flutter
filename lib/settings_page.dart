@@ -23,69 +23,72 @@ class UserSettingsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+              child: Text(
+                'Settings',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Account',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
               child: Row(
                 children: [
+                  // add a circle avatar
                   
-                  Text(
-                    'Settings',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  SizedBox(width: 16.0),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        'Wubeshet Yimam',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      SizedBox(height: 8.0),
+                      Text(
+                        'Edit Profile',
+                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            Text(
-              'Account',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage('assets/images/avatar.png'),
-                    ),
-                    SizedBox(width: 16.0),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Wubeshet Yimam',
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        SizedBox(height: 8.0),
-                        Text(
-                          'Edit Profile',
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
             SizedBox(height: 16.0),
-            Text(
-              'Settings',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Settings',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
             ),
             SizedBox(height: 8.0),
             ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: Icon(Icons.language_rounded),
               title: Text('Language'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {},
             ),
             Divider(),
             ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: Icon(Icons.notifications),
               title: Text('Notifications'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {},
             ),
             Divider(),
             ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: Icon(Icons.mode_night_rounded),
               title: Text('Dark Mode'),
               trailing: Switch(
                 value: false,
@@ -94,6 +97,7 @@ class UserSettingsPage extends StatelessWidget {
             ),
             Divider(),
             ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
               title: Text('Help'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {},
