@@ -11,10 +11,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Setting',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // set font family
+        
+        primarySwatch: Colors.grey,
+        // set the background color for the whole app to white
+        scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        // textTheme: TextTheme(
+        //   bodyText1: const TextStyle(fontFamily: 'chiller'),
+        // ),
       ),
-      home: UserSettingsPage(),
+      home: Padding(
+        padding: const EdgeInsets.only(left: 25),
+        child: UserSettingsPage(),
+      ),
+      
+    
     );
   }
 }
